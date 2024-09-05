@@ -1,6 +1,7 @@
 {
     "name": "lukasccb/laravel-license",
     "description": "Check license",
+    "version": "1.0.0",
     "type": "package",
     "license": "MIT",
     "autoload": {
@@ -21,6 +22,6 @@
             "email": "contato@webzow.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {}
 }
