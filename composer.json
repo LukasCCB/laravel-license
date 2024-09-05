@@ -1,5 +1,5 @@
 {
-    "name": "webzow/license",
+    "name": "lukasccb/laravel-license",
     "description": "Check license",
     "type": "package",
     "license": "MIT",
