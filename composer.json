@@ -1,0 +1,26 @@
+{
+    "name": "webzow/license",
+    "description": "Check license",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "webzow\\license\\": "src/"
+        }
+    },
+    "extra": {
+        "larave": {
+            "providers": [
+                "Webzow\\License\\LicenseServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "lukas",
+            "email": "contato@webzow.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
