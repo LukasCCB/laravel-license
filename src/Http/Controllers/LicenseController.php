@@ -41,9 +41,9 @@ class LicenseController extends BaseController
 
     public function validate()
     {
-        $cacheKey = 'license_validation_result';
+        //$cacheKey = 'license_validation_result';
 
-        return Cache::remember($cacheKey, 60, function () {
+        //return Cache::remember($cacheKey, 60, function () {
             $locale = config('app.locale') ?? 'en';
             $response = Http::post($this->endpointUrl.'/'.$this->appLicense.'/'.$locale , self::getAppData());
 
@@ -52,6 +52,6 @@ class LicenseController extends BaseController
             }
 
             abort(401, 'Unauthorized');
-        });
+        //});
     }
 }
