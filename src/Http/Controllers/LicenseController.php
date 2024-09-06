@@ -9,8 +9,7 @@ use Illuminate\Support\Facades\Http;
 
 class LicenseController extends BaseController
 {
-    protected string $endpointUrl = "https://license.webzow.com/api/check-license
-    ";
+    protected string $endpointUrl = "https://license.webzow.com/api/check-license";
     protected string $appLicense;
 
     public function __construct()
