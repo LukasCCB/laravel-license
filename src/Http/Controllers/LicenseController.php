@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Http;
 
 class LicenseController extends BaseController
 {
-    protected string $endpointUrl = "https://dummyjson.com/test";
+    protected string $endpointUrl = "https://license.webzow.com/api/check-license
+    ";
     protected string $appLicense;
 
     public function __construct()
@@ -44,7 +45,8 @@ class LicenseController extends BaseController
         $cacheKey = 'license_validation_result';
 
         return Cache::remember($cacheKey, 60, function () {
-            $response = Http::post($this->endpointUrl, self::getAppData());
+            $locale = config('app.locale') ?? 'en';
+            $response = Http::post($this->endpointUrl.'/'.$this->appLicense.'/'.$locale , self::getAppData());
 
             if ($response->status() === 200) {
                 return true;
